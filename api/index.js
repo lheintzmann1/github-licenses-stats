@@ -217,7 +217,7 @@ function renderSVG(username, topLicenses, count, theme = 'dark') {
 app.get('/api/top-licenses', async (req, res) => {
   const username = req.query.username;
   const count = Math.max(1, Math.min(10, Number(req.query.count) || 5)); // limit 1-10
-  const theme = req.query.theme === 'light' ? 'light' : 'dark'; // default to dark theme
+  const theme = req.query.theme || 'dark'; // default to dark theme
 
   if (!username) {
     res.status(400).send('Missing username parameter.');
