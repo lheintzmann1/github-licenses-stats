@@ -1,7 +1,7 @@
 # github-licenses-stats
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Live Demo](https://deploy-badge.vercel.app/vercel/skill-icons-two)](https://github-licenses-stats.vercel.app/)
+[![Live Demo](https://deploy-badge.vercel.app/vercel/github-licenses-stats)](https://github-licenses-stats.vercel.app/)
 
 ## About
 
