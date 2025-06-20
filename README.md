@@ -2,6 +2,7 @@
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Live Demo](https://deploy-badge.vercel.app/vercel/github-licenses-stats)](https://github-licenses-stats.vercel.app/)
+[![Vercel Deploy](https://img.shields.io/badge/vercel-deploy-black?style=flat&logo=vercel)](https://vercel.com/new/clone?repository-url=https://github.com/lheintzmann1/github-licenses-stats)
 
 ## About
 
