@@ -244,7 +244,7 @@ app.get('/api/top-licenses', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.redirect('https://github.com/lheintzmann1/github-license-stats');
+  res.redirect('https://github.com/lheintzmann1/github-licenses-stats');
 });
 
 app.listen(PORT, () => {
