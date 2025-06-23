@@ -128,6 +128,21 @@ const themes = {
     },
     border: 'rgba(255, 255, 255, 0.05)',
     barBackground: 'rgba(255, 255, 255, 0.05)'
+  },
+  onedark: {
+    background: {
+      gradient: {
+        start: '#282c34',
+        end: '#282c34'
+      }
+    },
+    text: {
+      primary: '#e4bf7a',
+      secondary: 'rgba(223, 109, 116, 1)',
+      tertiary: 'rgba(142, 181, 115, 1)'
+    },
+    border: 'rgba(255, 255, 255, 0.05)',
+    barBackground: 'rgba(255, 255, 255, 0.05)'
   }
 };
 
