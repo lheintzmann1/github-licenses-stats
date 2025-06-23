@@ -113,6 +113,21 @@ const themes = {
     },
     border: 'rgba(255, 255, 255, 0.05)',
     barBackground: 'rgba(255, 255, 255, 0.05)'
+  },
+  tokyonight: {
+    background: {
+      gradient: {
+        start: '#1a1b27',
+        end: '#1a1b27'
+      }
+    },
+    text: {
+      primary: '#70a5fd',
+      secondary: 'rgba(56, 189, 174, 1)',
+      tertiary: 'rgba(191, 145, 243, 1)'
+    },
+    border: 'rgba(255, 255, 255, 0.05)',
+    barBackground: 'rgba(255, 255, 255, 0.05)'
   }
 };
 
