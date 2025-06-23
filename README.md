@@ -30,7 +30,7 @@ This tool generates a dynamic SVG that shows the top licenses used across your G
 
 - `username` - Your GitHub username
 - `count` - Number of licenses to display (default: 5, maximum: 10)
-- `theme` - Color theme of the badge (options: `dark`, `light`, default: `dark`)
+- `theme` - Color theme of the badge (options: `dark`, `light`, `radical`, `merko`, `gruvbox`, `tokyonight`, `onedark`; default: `dark`)
 
 ## Development
 
