@@ -98,6 +98,21 @@ const themes = {
     },
     border: 'rgba(255, 255, 255, 0.05)',
     barBackground: 'rgba(255, 255, 255, 0.05)'
+  },
+  gruvbox: {
+    background: {
+      gradient: {
+        start: '#282828',
+        end: '#282828'
+      }
+    },
+    text: {
+      primary: '#fabd2f',
+      secondary: 'rgba(142, 192, 124, 1)',
+      tertiary: 'rgba(254, 128, 25, 1)'
+    },
+    border: 'rgba(255, 255, 255, 0.05)',
+    barBackground: 'rgba(255, 255, 255, 0.05)'
   }
 };
 
