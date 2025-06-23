@@ -74,8 +74,7 @@ const licenseColors = {
   
   'OSL-3.0': '#f43f5e',
   
-  'NOASSERTION': '#6b7280',
-  'UNLICENSED': '#374151'
+  'NOASSERTION': '#6b7280'
 };
 
 // Theme configuration
