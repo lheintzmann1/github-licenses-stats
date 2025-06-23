@@ -68,6 +68,21 @@ const themes = {
     },
     border: 'rgba(0, 0, 0, 0.05)',
     barBackground: 'rgba(0, 0, 0, 0.05)'
+  },
+  radical: {
+    background: {
+      gradient: {
+        start: '#141321',
+        end: '#141321'
+      }
+    },
+    text: {
+      primary: '#fe428e',
+      secondary: 'rgba(169, 254, 247, 1)',
+      tertiary: 'rgba(248, 216, 71, 1)'
+    },
+    border: 'rgba(255, 255, 255, 0.05)',
+    barBackground: 'rgba(255, 255, 255, 0.05)'
   }
 };
 
