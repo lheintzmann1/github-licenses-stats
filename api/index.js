@@ -83,6 +83,21 @@ const themes = {
     },
     border: 'rgba(255, 255, 255, 0.05)',
     barBackground: 'rgba(255, 255, 255, 0.05)'
+  },
+  merko: {
+    background: {
+      gradient: {
+        start: '#0a0f0b',
+        end: '#0a0f0b'
+      }
+    },
+    text: {
+      primary: '#abd200',
+      secondary: 'rgba(104, 181, 135, 1)',
+      tertiary: 'rgba(183, 211, 100, 1)'
+    },
+    border: 'rgba(255, 255, 255, 0.05)',
+    barBackground: 'rgba(255, 255, 255, 0.05)'
   }
 };
 
