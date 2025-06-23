@@ -96,7 +96,7 @@ The following licenses are supported with custom colors:
 - **LPPL-1.3c** - LaTeX Project Public License v1.3c
 - **MS-PL** - Microsoft Public License
 
-### Special Cases
+### Special Case
 
 - **NOASSERTION** - No License Detected
 
