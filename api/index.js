@@ -23,18 +23,59 @@ async function fetchAllRepos(username) {
 
 // Color schemes for different licenses
 const licenseColors = {
-  'MIT': '#2DA44E',
-  'Apache-2.0': '#E34C26',
-  'GPL-3.0': '#9C55B6',
-  'GPL-2.0': '#7A4CB4',
-  'BSD-3-Clause': '#3572A5',
-  'BSD-2-Clause': '#2B7489',
-  'ISC': '#F05033',
-  'MPL-2.0': '#F34B7D',
-  'LGPL-3.0': '#F1E05A',
-  'LGPL-2.1': '#F7DF1E',
-  'NOASSERTION': '#586069',
-  'UNLICENSED': '#333333'
+  'MIT': '#28a745',
+  'ISC': '#34d058',
+  '0BSD': '#40d465',
+  
+  'Apache-2.0': '#fd7e14',
+  
+  'BSD-2-Clause': '#0969da',
+  'BSD-3-Clause': '#1f6feb',
+  'BSD-3-Clause-Clear': '#218bff',
+  'BSD-4-Clause': '#0550ae',
+  
+  'GPL': '#8b5cf6',
+  'GPL-2.0': '#7c3aed',
+  'GPL-3.0': '#8b5cf6',
+  'AGPL-3.0': '#581c87',
+  
+  'LGPL': '#c084fc',
+  'LGPL-2.1': '#ddd6fe',
+  'LGPL-3.0': '#c084fc',
+  
+  'MPL-2.0': '#ec4899',
+  
+  'EPL-1.0': '#6366f1',
+  'EPL-2.0': '#4f46e5',
+  
+  'CC': '#06b6d4',
+  'CC0-1.0': '#22d3ee',
+  'CC-BY-4.0': '#0891b2',
+  'CC-BY-SA-4.0': '#0e7490',
+  
+  'Unlicense': '#94a3b8',
+  'WTFPL': '#cbd5e1',
+  
+  'Artistic-2.0': '#22d3ee',
+  'AFL-3.0': '#67e8f9',
+  'OFL-1.1': '#a5f3fc',
+  'LPPL-1.3c': '#cffafe',
+  
+  'BSL-1.0': '#facc15',
+  'Zlib': '#fbbf24',
+  'PostgreSQL': '#f59e0b',
+  'NCSA': '#eab308',
+  
+  'ECL-2.0': '#10b981',
+  
+  'EUPL-1.1': '#8b5cf6',
+  
+  'MS-PL': '#0ea5e9',
+  
+  'OSL-3.0': '#f43f5e',
+  
+  'NOASSERTION': '#6b7280',
+  'UNLICENSED': '#374151'
 };
 
 // Theme configuration
