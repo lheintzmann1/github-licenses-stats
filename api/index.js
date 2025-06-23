@@ -192,8 +192,8 @@ function getLicenseColor(license) {
 }
 
 // Calculate bar width based on percentage
-function getBarWidth(count, maxCount, maxWidth = 200) {
-  return Math.max(20, (count / maxCount) * maxWidth);
+function getBarWidth(count, totalRepos, maxWidth = 200) {
+  return Math.max(5, (count / totalRepos) * maxWidth);
 }
 
 // Helper: Generate beautiful SVG card
@@ -303,7 +303,7 @@ function renderSVG(username, topLicenses, count, theme = 'dark') {
   topLicenses.forEach(([license, licenseCount], idx) => {
     const y = headerHeight + padding + (idx * itemHeight);
     const percentage = Math.round((licenseCount / totalRepos) * 100);
-    const barWidth = getBarWidth(licenseCount, maxCount, barMaxWidth);
+    const barWidth = getBarWidth(licenseCount, totalRepos, barMaxWidth);
     const color = getLicenseColor(license);
     
     // Background bar
