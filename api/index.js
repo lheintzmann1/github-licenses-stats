@@ -302,7 +302,7 @@ function renderSVG(username, topLicenses, count, theme = 'dark') {
   // Add license items
   topLicenses.forEach(([license, licenseCount], idx) => {
     const y = headerHeight + padding + (idx * itemHeight);
-    const percentage = Math.round((licenseCount / totalRepos) * 100);
+    const percentage = ((licenseCount / totalRepos) * 100).toFixed(2);
     const barWidth = getBarWidth(licenseCount, totalRepos, barMaxWidth);
     const color = getLicenseColor(license);
     
