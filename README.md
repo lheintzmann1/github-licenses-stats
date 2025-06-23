@@ -37,6 +37,7 @@ This tool generates a dynamic SVG that shows the top licenses used across your G
 The following licenses are supported with custom colors:
 
 ### Permissive Licenses
+
 - **MIT** - MIT License
 - **ISC** - ISC License
 - **0BSD** - BSD Zero Clause License
@@ -47,23 +48,27 @@ The following licenses are supported with custom colors:
 - **NCSA** - University of Illinois/NCSA Open Source License
 
 ### BSD Licenses
+
 - **BSD-2-Clause** - BSD 2-Clause "Simplified" License
 - **BSD-3-Clause** - BSD 3-Clause "New" or "Revised" License
 - **BSD-3-Clause-Clear** - BSD 3-Clause Clear License
 - **BSD-4-Clause** - BSD 4-Clause "Original" or "Old" License
 
 ### GPL Licenses
+
 - **GPL** - GNU General Public License
 - **GPL-2.0** - GNU General Public License v2.0
 - **GPL-3.0** - GNU General Public License v3.0
 - **AGPL-3.0** - GNU Affero General Public License v3.0
 
 ### LGPL Licenses
+
 - **LGPL** - GNU Lesser General Public License
 - **LGPL-2.1** - GNU Lesser General Public License v2.1
 - **LGPL-3.0** - GNU Lesser General Public License v3.0
 
 ### Other Copyleft Licenses
+
 - **MPL-2.0** - Mozilla Public License 2.0
 - **EPL-1.0** - Eclipse Public License 1.0
 - **EPL-2.0** - Eclipse Public License 2.0
@@ -72,16 +77,19 @@ The following licenses are supported with custom colors:
 - **OSL-3.0** - Open Software License 3.0
 
 ### Creative Commons Licenses
+
 - **CC** - Creative Commons
 - **CC0-1.0** - Creative Commons Zero v1.0 Universal
 - **CC-BY-4.0** - Creative Commons Attribution 4.0 International
 - **CC-BY-SA-4.0** - Creative Commons Attribution Share Alike 4.0 International
 
 ### Public Domain & Unlicense
+
 - **Unlicense** - The Unlicense
 - **WTFPL** - Do What The F*ck You Want To Public License
 
 ### Specialized Licenses
+
 - **Artistic-2.0** - Artistic License 2.0
 - **AFL-3.0** - Academic Free License v3.0
 - **OFL-1.1** - SIL Open Font License 1.1
@@ -89,6 +97,7 @@ The following licenses are supported with custom colors:
 - **MS-PL** - Microsoft Public License
 
 ### Special Cases
+
 - **NOASSERTION** - No License Detected
 
 *Note: If a license is not in the list above, it will be displayed with a default gray color.*
