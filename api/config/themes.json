@@ -133,5 +133,20 @@
     },
     "border": "rgba(255, 255, 255, 0.05)",
     "barBackground": "rgba(255, 255, 255, 0.05)"
+  },
+  "dracula": {
+    "background": {
+      "gradient": {
+        "start": "#282a36",
+        "end": "#282a36"
+      }
+    },
+    "text": {
+      "primary": "#ff6e96",
+      "secondary": "rgba(248, 248, 242, 1)",
+      "tertiary": "rgba(121, 218, 250, 1)"
+    },
+    "border": "rgba(255, 255, 255, 0.05)",
+    "barBackground": "rgba(255, 255, 255, 0.05)"
   }
 }
