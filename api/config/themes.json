@@ -118,5 +118,20 @@
     },
     "border": "rgba(255, 255, 255, 0.05)",
     "barBackground": "rgba(255, 255, 255, 0.05)"
+  },
+  "synthwave": {
+    "background": {
+      "gradient": {
+        "start": "#2b213a",
+        "end": "#2b213a"
+      }
+    },
+    "text": {
+      "primary": "#e2e9ec",
+      "secondary": "rgba(229, 40, 158, 1)",
+      "tertiary": "rgba(239, 133, 57, 1)"
+    },
+    "border": "rgba(255, 255, 255, 0.05)",
+    "barBackground": "rgba(255, 255, 255, 0.05)"
   }
 }
