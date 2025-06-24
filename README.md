@@ -32,6 +32,12 @@ This tool generates a dynamic SVG that shows the top licenses used across your G
 - `count` - Number of licenses to display (default: 5, maximum: 10)
 - `theme` - Color theme of the badge (options: `dark`, `light`, `radical`, `merko`, `gruvbox`, `tokyonight`, `onedark`; default: `dark`)
 
+## Available Themes
+
+A variety of themes are available to customize the appearance of the generated SVGs. You can find the full list of themes along with previews in the [Themes.md](./Themes.md) file.
+
+To update the list of themes dynamically, run the `updateThemes.js` script located in the `scripts` folder.
+
 ## Supported Licenses
 
 The following licenses are supported with custom colors:
