@@ -1,6 +1,11 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+
+// Import configuration files
+const themes = require('./config/themes.json');
+const licenseColors = require('./config/licenses.json');
 
 const PORT = process.env.PORT || 3000;
 
@@ -20,171 +25,6 @@ async function fetchAllRepos(username) {
   }
   return repos;
 }
-
-// Color schemes for different licenses
-const licenseColors = {
-  'MIT': '#28a745',
-  'ISC': '#34d058',
-  '0BSD': '#40d465',
-  
-  'Apache-2.0': '#fd7e14',
-  
-  'BSD-2-Clause': '#0969da',
-  'BSD-3-Clause': '#1f6feb',
-  'BSD-3-Clause-Clear': '#218bff',
-  'BSD-4-Clause': '#0550ae',
-  
-  'GPL': '#8b5cf6',
-  'GPL-2.0': '#7c3aed',
-  'GPL-3.0': '#8b5cf6',
-  'AGPL-3.0': '#581c87',
-  
-  'LGPL': '#c084fc',
-  'LGPL-2.1': '#ddd6fe',
-  'LGPL-3.0': '#c084fc',
-  
-  'MPL-2.0': '#ec4899',
-  
-  'EPL-1.0': '#6366f1',
-  'EPL-2.0': '#4f46e5',
-  
-  'CC': '#06b6d4',
-  'CC0-1.0': '#22d3ee',
-  'CC-BY-4.0': '#0891b2',
-  'CC-BY-SA-4.0': '#0e7490',
-  
-  'Unlicense': '#94a3b8',
-  'WTFPL': '#cbd5e1',
-  
-  'Artistic-2.0': '#22d3ee',
-  'AFL-3.0': '#67e8f9',
-  'OFL-1.1': '#a5f3fc',
-  'LPPL-1.3c': '#cffafe',
-  
-  'BSL-1.0': '#facc15',
-  'Zlib': '#fbbf24',
-  'PostgreSQL': '#f59e0b',
-  'NCSA': '#eab308',
-  
-  'ECL-2.0': '#10b981',
-  
-  'EUPL-1.1': '#8b5cf6',
-  
-  'MS-PL': '#0ea5e9',
-  
-  'OSL-3.0': '#f43f5e',
-  
-  'NOASSERTION': '#6b7280'
-};
-
-// Theme configuration
-const themes = {
-  dark: {
-    background: {
-      gradient: {
-        start: '#0d1117',
-        end: '#161b22'
-      }
-    },
-    text: {
-      primary: '#ffffff',
-      secondary: 'rgba(255, 255, 255, 0.6)',
-      tertiary: 'rgba(255, 255, 255, 0.8)'
-    },
-    border: 'rgba(255, 255, 255, 0.05)',
-    barBackground: 'rgba(255, 255, 255, 0.05)'
-  },
-  light: {
-    background: {
-      gradient: {
-        start: '#ffffff',
-        end: '#f6f8fa'
-      }
-    },
-    text: {
-      primary: '#24292f',
-      secondary: 'rgba(36, 41, 47, 0.6)',
-      tertiary: 'rgba(36, 41, 47, 0.8)'
-    },
-    border: 'rgba(0, 0, 0, 0.05)',
-    barBackground: 'rgba(0, 0, 0, 0.05)'
-  },
-  radical: {
-    background: {
-      gradient: {
-        start: '#141321',
-        end: '#141321'
-      }
-    },
-    text: {
-      primary: '#fe428e',
-      secondary: 'rgba(169, 254, 247, 1)',
-      tertiary: 'rgba(248, 216, 71, 1)'
-    },
-    border: 'rgba(255, 255, 255, 0.05)',
-    barBackground: 'rgba(255, 255, 255, 0.05)'
-  },
-  merko: {
-    background: {
-      gradient: {
-        start: '#0a0f0b',
-        end: '#0a0f0b'
-      }
-    },
-    text: {
-      primary: '#abd200',
-      secondary: 'rgba(104, 181, 135, 1)',
-      tertiary: 'rgba(183, 211, 100, 1)'
-    },
-    border: 'rgba(255, 255, 255, 0.05)',
-    barBackground: 'rgba(255, 255, 255, 0.05)'
-  },
-  gruvbox: {
-    background: {
-      gradient: {
-        start: '#282828',
-        end: '#282828'
-      }
-    },
-    text: {
-      primary: '#fabd2f',
-      secondary: 'rgba(142, 192, 124, 1)',
-      tertiary: 'rgba(254, 128, 25, 1)'
-    },
-    border: 'rgba(255, 255, 255, 0.05)',
-    barBackground: 'rgba(255, 255, 255, 0.05)'
-  },
-  tokyonight: {
-    background: {
-      gradient: {
-        start: '#1a1b27',
-        end: '#1a1b27'
-      }
-    },
-    text: {
-      primary: '#70a5fd',
-      secondary: 'rgba(56, 189, 174, 1)',
-      tertiary: 'rgba(191, 145, 243, 1)'
-    },
-    border: 'rgba(255, 255, 255, 0.05)',
-    barBackground: 'rgba(255, 255, 255, 0.05)'
-  },
-  onedark: {
-    background: {
-      gradient: {
-        start: '#282c34',
-        end: '#282c34'
-      }
-    },
-    text: {
-      primary: '#e4bf7a',
-      secondary: 'rgba(223, 109, 116, 1)',
-      tertiary: 'rgba(142, 181, 115, 1)'
-    },
-    border: 'rgba(255, 255, 255, 0.05)',
-    barBackground: 'rgba(255, 255, 255, 0.05)'
-  }
-};
 
 // Get color for license (with fallback)
 function getLicenseColor(license) {

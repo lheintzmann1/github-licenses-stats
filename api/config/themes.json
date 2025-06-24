@@ -1,0 +1,107 @@
+{
+  "dark": {
+    "background": {
+      "gradient": {
+        "start": "#0d1117",
+        "end": "#161b22"
+      }
+    },
+    "text": {
+      "primary": "#ffffff",
+      "secondary": "rgba(255, 255, 255, 0.6)",
+      "tertiary": "rgba(255, 255, 255, 0.8)"
+    },
+    "border": "rgba(255, 255, 255, 0.05)",
+    "barBackground": "rgba(255, 255, 255, 0.05)"
+  },
+  "light": {
+    "background": {
+      "gradient": {
+        "start": "#ffffff",
+        "end": "#f6f8fa"
+      }
+    },
+    "text": {
+      "primary": "#24292f",
+      "secondary": "rgba(36, 41, 47, 0.6)",
+      "tertiary": "rgba(36, 41, 47, 0.8)"
+    },
+    "border": "rgba(0, 0, 0, 0.05)",
+    "barBackground": "rgba(0, 0, 0, 0.05)"
+  },
+  "radical": {
+    "background": {
+      "gradient": {
+        "start": "#141321",
+        "end": "#141321"
+      }
+    },
+    "text": {
+      "primary": "#fe428e",
+      "secondary": "rgba(169, 254, 247, 1)",
+      "tertiary": "rgba(248, 216, 71, 1)"
+    },
+    "border": "rgba(255, 255, 255, 0.05)",
+    "barBackground": "rgba(255, 255, 255, 0.05)"
+  },
+  "merko": {
+    "background": {
+      "gradient": {
+        "start": "#0a0f0b",
+        "end": "#0a0f0b"
+      }
+    },
+    "text": {
+      "primary": "#abd200",
+      "secondary": "rgba(104, 181, 135, 1)",
+      "tertiary": "rgba(183, 211, 100, 1)"
+    },
+    "border": "rgba(255, 255, 255, 0.05)",
+    "barBackground": "rgba(255, 255, 255, 0.05)"
+  },
+  "gruvbox": {
+    "background": {
+      "gradient": {
+        "start": "#282828",
+        "end": "#282828"
+      }
+    },
+    "text": {
+      "primary": "#fabd2f",
+      "secondary": "rgba(142, 192, 124, 1)",
+      "tertiary": "rgba(254, 128, 25, 1)"
+    },
+    "border": "rgba(255, 255, 255, 0.05)",
+    "barBackground": "rgba(255, 255, 255, 0.05)"
+  },
+  "tokyonight": {
+    "background": {
+      "gradient": {
+        "start": "#1a1b27",
+        "end": "#1a1b27"
+      }
+    },
+    "text": {
+      "primary": "#70a5fd",
+      "secondary": "rgba(56, 189, 174, 1)",
+      "tertiary": "rgba(191, 145, 243, 1)"
+    },
+    "border": "rgba(255, 255, 255, 0.05)",
+    "barBackground": "rgba(255, 255, 255, 0.05)"
+  },
+  "onedark": {
+    "background": {
+      "gradient": {
+        "start": "#282c34",
+        "end": "#282c34"
+      }
+    },
+    "text": {
+      "primary": "#e4bf7a",
+      "secondary": "rgba(223, 109, 116, 1)",
+      "tertiary": "rgba(142, 181, 115, 1)"
+    },
+    "border": "rgba(255, 255, 255, 0.05)",
+    "barBackground": "rgba(255, 255, 255, 0.05)"
+  }
+}
