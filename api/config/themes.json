@@ -103,5 +103,20 @@
     },
     "border": "rgba(255, 255, 255, 0.05)",
     "barBackground": "rgba(255, 255, 255, 0.05)"
+  },
+  "cobalt": {
+    "background": {
+      "gradient": {
+        "start": "#193549",
+        "end": "#193549"
+      }
+    },
+    "text": {
+      "primary": "#e683d9",
+      "secondary": "rgba(117, 238, 178, 1)",
+      "tertiary": "rgba(4, 128, 239, 1)"
+    },
+    "border": "rgba(255, 255, 255, 0.05)",
+    "barBackground": "rgba(255, 255, 255, 0.05)"
   }
 }
