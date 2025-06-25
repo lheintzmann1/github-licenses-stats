@@ -58,8 +58,8 @@ function renderSVG(username, topLicenses, count, theme = 'dark') {
   <svg width="${cardWidth}" height="${totalHeight}" viewBox="0 0 ${cardWidth} ${totalHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" style="stop-color:${background.gradient.start};stop-opacity:1" />
-        <stop offset="100%" style="stop-color:${background.gradient.end};stop-opacity:1" />
+        <stop offset="0%" stop-color="${background.gradient.start}" stop-opacity="1" />
+        <stop offset="100%" stop-color="${background.gradient.end}" stop-opacity="1" />
       </linearGradient>
       
       <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
