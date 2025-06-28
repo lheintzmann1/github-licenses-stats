@@ -213,9 +213,6 @@ function renderSVG(username, topLicenses, count, theme = 'dark') {
   return svg;
 }
 
-// Initialize Speed Insights
-const { injectSpeedInsights } = require('@vercel/speed-insights');
-
 app.get('/api/top-licenses', async (req, res) => {
   const username = req.query.username;
   const count = Math.max(1, Math.min(10, Number(req.query.count) || 5)); // limit 1-10
@@ -239,14 +236,7 @@ app.get('/api/top-licenses', async (req, res) => {
 
     res.set('Content-Type', 'image/svg+xml');
     res.set('Cache-Control', 'public, max-age=3600'); // Cache for 1 hour
-    
-    // Generate SVG with Speed Insights
-    let svgContent = renderSVG(username, topLicenses, count, theme);
-    
-    // Inject Speed Insights
-    await injectSpeedInsights(svgContent);
-    
-    res.send(svgContent);
+    res.send(renderSVG(username, topLicenses, count, theme));
   } catch (e) {
     res.status(500).send('Error: ' + e.message);
   }
