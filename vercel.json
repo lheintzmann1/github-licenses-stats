@@ -1,7 +1,8 @@
 {
   "functions": {
     "api/index.js": {
-      "runtime": "@vercel/node@2.0.0"
+      "runtime": "@vercel/node@2.0.0",
+      "maxDuration": 10
     }
   },
   "rewrites": [
@@ -16,7 +17,20 @@
   ],
   "headers": [
     {
-      "source": "/api/top-licenses",
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=7200"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; img-src 'self' data:; style-src 'unsafe-inline'"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
       "headers": [
         {
           "key": "Cache-Control",

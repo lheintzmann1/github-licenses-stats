@@ -1,7 +1,18 @@
 const express = require('express');
 const path = require('path');
+const compression = require('compression');
+const { Redis } = require('@upstash/redis');
 const app = express();
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+
+// Enable compression
+app.use(compression());
+
+// Initialize Redis client
+const redis = new Redis({
+  url: process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL,
+  token: process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN,
+});
 
 // Import configuration files
 const themes = require('./config/themes.json');
@@ -11,19 +22,49 @@ const PORT = process.env.PORT || 3000;
 
 // Helper: Fetch all repos for a given user (public only)
 async function fetchAllRepos(username) {
+  // Try to get from cache first
+  const cacheKey = `repos:${username}`;
+  const cachedRepos = await redis.get(cacheKey);
+  if (cachedRepos) {
+    return cachedRepos;
+  }
+
   let repos = [];
   let page = 1;
-  while (true) {
-    const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&page=${page}`, {
-      headers: { 'User-Agent': 'github-license-stats' }
-    });
-    if (!res.ok) break;
-    const data = await res.json();
-    if (!Array.isArray(data) || data.length === 0) break;
-    repos = repos.concat(data);
-    page++;
+  
+  try {
+    while (true) {
+      const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&page=${page}`, {
+        headers: { 
+          'User-Agent': 'github-license-stats',
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+      
+      if (!res.ok) {
+        if (res.status === 404) return [];
+        break;
+      }
+      
+      const data = await res.json();
+      if (!Array.isArray(data) || data.length === 0) break;
+      
+      repos = repos.concat(data);
+      page++;
+      
+      if (data.length < 100) break;
+    }
+    
+    // Cache the results for 1 hour
+    if (repos.length > 0) {
+      await redis.set(cacheKey, repos, { ex: 3600 });
+    }
+    
+    return repos;
+  } catch (error) {
+    console.error(`Error fetching repos for ${username}:`, error);
+    return [];
   }
-  return repos;
 }
 
 // Get color for license (with fallback)
@@ -38,6 +79,9 @@ function getBarWidth(count, totalRepos, maxWidth = 200) {
 
 // Helper: Generate beautiful SVG card
 function renderSVG(username, topLicenses, count, theme = 'dark') {
+  // Cache key for the SVG
+  const cacheKey = `svg:${username}:${theme}:${JSON.stringify(topLicenses)}`;
+  
   const cardWidth = 500;
   const headerHeight = 60;  // Reduced header height
   const itemHeight = 40;    // Slightly reduced item height
