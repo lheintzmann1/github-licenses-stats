@@ -16,7 +16,7 @@ This tool generates a dynamic SVG that shows the top licenses used across your G
 ![Used Licenses](https://github-licenses-stats.vercel.app/api/top-licenses?username=USERNAME&count=5&theme=light)
 ```
 
-![Github](https://github-licenses-stats.vercel.app/api/top-licenses?username=GITHUB&count=8&theme=light)
+![Github](https://github-licenses-stats.vercel.app/api/top-licenses?username=github&count=8&theme=light)
 
 ### HTML Example
 
@@ -24,7 +24,7 @@ This tool generates a dynamic SVG that shows the top licenses used across your G
 <img src="https://github-licenses-stats.vercel.app/api/top-licenses?username=USERNAME&count=5&theme=dark" alt="Used Licenses">
 ```
 
-<img src="https://github-licenses-stats.vercel.app/api/top-licenses?username=GITHUB&count=8&theme=dark" alt="Used Licenses">
+<img src="https://github-licenses-stats.vercel.app/api/top-licenses?username=github&count=8&theme=dark" alt="Used Licenses">
 
 ## Parameters
 
