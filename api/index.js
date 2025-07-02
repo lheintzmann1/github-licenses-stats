@@ -43,7 +43,9 @@ async function fetchAllRepos(username) {
       
       if (!res.ok) {
         if (res.status === 404) return [];
-        break;
+        if (res.status === 403) throw new Error('Rate limit exceeded');
+        if (res.status === 401) throw new Error('Authentication required');
+        throw new Error(`GitHub API error: ${res.status}`);
       }
       
       const data = await res.json();
