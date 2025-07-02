@@ -2,10 +2,9 @@ const express = require('express');
 const path = require('path');
 const compression = require('compression');
 const { Redis } = require('@upstash/redis');
-const app = express();
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+const fetch = require('node-fetch');
 
-// Enable compression
+const app = express();
 app.use(compression());
 
 // Initialize Redis client
