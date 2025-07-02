@@ -24,11 +24,15 @@ const PORT = process.env.PORT || 3000;
 async function fetchAllRepos(username) {
   // Try to get from cache first
   const cacheKey = `repos:${username}`;
-  const cachedRepos = await redis.get(cacheKey);
-  if (cachedRepos) {
+  try {
+    const cachedRepos = await redis.get(cacheKey);
+    if (cachedRepos) {
     return cachedRepos;
+    }
+  } catch (error) {
+    console.warn('Redis error, continuing without cache:', error);
   }
-
+  
   let repos = [];
   let page = 1;
   
