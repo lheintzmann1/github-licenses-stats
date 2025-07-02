@@ -87,6 +87,16 @@ function getBarWidth(count, totalRepos, maxWidth = 200) {
 function renderSVG(username, topLicenses, count, theme = 'dark') {
   // Cache key for the SVG
   const cacheKey = `svg:${username}:${theme}:${JSON.stringify(topLicenses)}`;
+
+  // Try to get from cache first
+  try {
+    const cachedSVG = redis.get(cacheKey);
+    if (cachedSVG) {
+      return cachedSVG;
+    }
+  } catch (error) {
+    console.warn('Redis error, continuing without cache:', error);
+  }
   
   const cardWidth = 500;
   const headerHeight = 60;  // Reduced header height
@@ -216,6 +226,7 @@ function renderSVG(username, topLicenses, count, theme = 'dark') {
   });
 
   svg += `</svg>`;
+  redis.set(cacheKey, svg, { ex: 3600 }); // Cache for 1 hour
   return svg;
 }
 
