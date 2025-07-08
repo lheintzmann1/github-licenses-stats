@@ -8,6 +8,8 @@
 
 This tool generates a dynamic SVG that shows the top licenses used across your GitHub repositories. It's perfect for showcasing the license distribution in your GitHub profile.
 
+This project is involed in the Summer of Making. Support the project [here](https://summer.hackclub.com/projects/2144) !
+
 ## Usage
 
 ### Markdown Example
