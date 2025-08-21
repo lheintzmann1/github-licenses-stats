@@ -148,5 +148,50 @@
     },
     "border": "rgba(255, 255, 255, 0.05)",
     "barBackground": "rgba(255, 255, 255, 0.05)"
+  },
+  "ayu-light": {
+    "background": {
+      "gradient": {
+        "start": "#F8F9FA",
+        "end": "#FCFCFC"
+      }
+    },
+    "text": {
+      "primary": "#5C6166",
+      "secondary": "rgba(138, 145, 153, 0.8)",
+      "tertiary": "rgba(138, 145, 153, 1)"
+    },
+    "border": "rgba(138, 145, 153, 0.1)",
+    "barBackground": "rgba(138, 145, 153, 0.1)"
+  },
+  "ayu-mirage": {
+    "background": {
+      "gradient": {
+        "start": "#1F2430",
+        "end": "#242936"
+      }
+    },
+    "text": {
+      "primary": "#CCCAC2",
+      "secondary": "rgba(184, 207, 230, 0.5)",
+      "tertiary": "rgba(138, 145, 153, 1)"
+    },
+    "border": "rgba(138, 145, 153, 0.18)",
+    "barBackground": "rgba(138, 145, 153, 0.18)"
+  },
+  "ayu-dark": {
+    "background": {
+      "gradient": {
+        "start": "#0B0E14",
+        "end": "#0D1017"
+      }
+    },
+    "text": {
+      "primary": "#BFBDB6",
+      "secondary": "rgba(172, 182, 191, 0.55)",
+      "tertiary": "rgba(108, 115, 128, 0.9)"
+    },
+    "border": "rgba(108, 115, 128, 0.2)",
+    "barBackground": "rgba(108, 115, 128, 0.2)"
   }
 }

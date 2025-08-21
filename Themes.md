@@ -14,5 +14,8 @@ This document showcases the available themes dynamically generated from the them
 | Cobalt | ![cobalt](https://github-licenses-stats.vercel.app/api/top-licenses?theme=cobalt&username=github&count=10) |
 | Synthwave | ![synthwave](https://github-licenses-stats.vercel.app/api/top-licenses?theme=synthwave&username=github&count=10) |
 | Dracula | ![dracula](https://github-licenses-stats.vercel.app/api/top-licenses?theme=dracula&username=github&count=10) |
+| Ayu-light | ![ayu-light](https://github-licenses-stats.vercel.app/api/top-licenses?theme=ayu-light&username=github&count=10) |
+| Ayu-mirage | ![ayu-mirage](https://github-licenses-stats.vercel.app/api/top-licenses?theme=ayu-mirage&username=github&count=10) |
+| Ayu-dark | ![ayu-dark](https://github-licenses-stats.vercel.app/api/top-licenses?theme=ayu-dark&username=github&count=10) |
 
 > **Note:** This file is generated dynamically. Run the update script to refresh it when new themes are added.
