@@ -107,6 +107,15 @@ function renderSVG(username, topLicenses, count, theme = 'dark') {
         <stop offset="100%" stop-color="${background.gradient.end}" stop-opacity="1" />
       </linearGradient>
       
+      <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch" result="noise"/>
+        <feColorMatrix in="noise" type="saturate" values="0" result="desaturatedNoise"/>
+        <feComponentTransfer in="desaturatedNoise" result="theNoise">
+          <feFuncA type="table" tableValues="0 0 0.05 0"/>
+        </feComponentTransfer>
+        <feBlend in="SourceGraphic" in2="theNoise" mode="multiply"/>
+      </filter>
+      
       <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
         <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.25"/>
       </filter>
@@ -123,7 +132,7 @@ function renderSVG(username, topLicenses, count, theme = 'dark') {
     <style>
       .card-bg { 
         fill: url(#bgGradient); 
-        filter: url(#shadow);
+        filter: url(#noise) url(#shadow);
       }
       .border { 
         stroke: ${border}; 
